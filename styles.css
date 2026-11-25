@@ -1,0 +1,418 @@
+@font-face {
+  font-family: Inter;
+  src: url("./assets/inter-latin.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+.ogana-page {
+  margin: 0;
+  --paper: #F7F5ED;
+  --surface: #FFFFFF;
+  --ink: #292333;
+  --quiet: #686370;
+  --brand: #513080;
+  --brand-pressed: #39225A;
+  --lilac: #EEE8F5;
+  --gold: #E9B824;
+  --line: #DED9E4;
+  --gutter: clamp(22px, 5.25cqi, 58px);
+  --section-space: clamp(42px, 6cqi, 70px);
+  container-type: inline-size;
+  color-scheme: light;
+  color: var(--ink);
+  background: var(--paper);
+  font: 400 16px/1.55 Inter, system-ui, sans-serif;
+  text-align: start;
+}
+.ogana-page :where(*, *::before, *::after) {
+  box-sizing: border-box;
+}
+.ogana-page :where(h1,h2,h3,p,ol,dl,dd) {
+  margin: 0;
+}
+.ogana-page :where(h1,h2,h3,dt) {
+  color: var(--ink);
+}
+.ogana-page :where(a:focus-visible) {
+  outline: 2px solid var(--brand);
+  outline-offset: 4px;
+}
+.ogana-wrap {
+  max-inline-size: 1180px;
+  padding-inline: var(--gutter);
+  margin-inline: auto;
+}
+.ogana-header {
+  border-block-end: 1px solid var(--line);
+}
+.ogana-header-inner {
+  min-block-size: 69px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0 20px;
+  flex-wrap: wrap;
+}
+.ogana-brand {
+  display: block;
+  inline-size: 96px;
+  block-size: auto;
+  flex: none;
+}
+.ogana-header nav {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+.ogana-header nav a {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: 44px;
+  color: var(--brand);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.ogana-header nav a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.ogana-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(28px, 5cqi, 62px);
+  padding-block: clamp(42px, 6.7cqi, 78px);
+}
+.ogana-hero h1 {
+  font-size: clamp(40px, 6.05cqi, 67px);
+  font-weight: 800;
+  line-height: 1.04;
+  letter-spacing: -.055em;
+  text-wrap: balance;
+}
+.ogana-hero h1 span {
+  display: block;
+  color: var(--brand);
+}
+.ogana-hero-copy > p:first-of-type {
+  max-inline-size: 44ch;
+  margin-block: 18px 24px;
+  color: var(--quiet);
+}
+.ogana-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.ogana-action,
+.ogana-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  min-block-size: 50px;
+  padding: 10px 19px;
+  border-radius: 9px;
+  color: var(--surface);
+  background: var(--brand);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.ogana-secondary {
+  border: 1px solid var(--brand);
+  color: var(--brand);
+  background: var(--surface);
+}
+.ogana-secondary:hover {
+  background: var(--lilac);
+}
+.ogana-action:hover {
+  background: var(--brand-pressed);
+}
+.ogana-beta {
+  margin-block-start: 10px;
+  color: var(--quiet);
+  font-size: 13px;
+}
+.ogana-devices {
+  position: relative;
+  aspect-ratio: 1.12;
+  overflow: hidden;
+  border-radius: 20px;
+  background: var(--lilac);
+}
+.ogana-devices img {
+  position: absolute;
+  display: block;
+  max-inline-size: none;
+  block-size: auto;
+}
+.ogana-device-company {
+  z-index: 1;
+  inline-size: 112%;
+  inset-inline-start: -19%;
+  inset-block-start: -11%;
+}
+.ogana-device-affiliate {
+  inline-size: 104%;
+  inset-inline-start: 17%;
+  inset-block-start: -7%;
+}
+.ogana-page h2 {
+  font-size: clamp(26px, 3.75cqi, 42px);
+  font-weight: 750;
+  line-height: 1.12;
+  letter-spacing: -.042em;
+  text-wrap: balance;
+}
+.ogana-page :where(h3,dt) {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+.ogana-flow {
+  background: var(--surface);
+  padding-block: var(--section-space);
+  border-block: 1px solid var(--line);
+}
+.ogana-steps {
+  --step-gap: clamp(18px, 3.4cqi, 36px);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--step-gap);
+  margin-block-start: 27px;
+  padding: 0;
+  list-style: none;
+}
+.ogana-steps li {
+  position: relative;
+}
+.ogana-step-number {
+  display: grid;
+  place-items: center;
+  inline-size: 36px;
+  block-size: 36px;
+  margin-block-end: 14px;
+  border-radius: 50%;
+  background: var(--lilac);
+  color: var(--brand);
+  font-weight: 700;
+}
+.ogana-steps li:first-child .ogana-step-number {
+  background: var(--gold);
+  color: var(--ink);
+}
+.ogana-steps li:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  inset-block-start: 18px;
+  inset-inline-start: 47px;
+  inset-inline-end: calc(10px - var(--step-gap));
+  border-block-start: 1px solid var(--line);
+}
+.ogana-steps p {
+  margin-block-start: 6px;
+  color: var(--quiet);
+}
+.ogana-example {
+  padding-block-start: var(--section-space);
+}
+.ogana-example-band {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr);
+  align-items: start;
+  gap: clamp(20px, 4cqi, 44px);
+  padding: clamp(26px, 4.6cqi, 52px);
+  border-radius: 18px;
+  background: var(--lilac);
+}
+.ogana-example h2 {
+  color: var(--brand);
+  max-inline-size: 13ch;
+}
+.ogana-referrers {
+  padding-block: var(--section-space);
+}
+.ogana-section-label {
+  margin-block-end: 8px;
+  color: var(--brand);
+  font-size: 13px;
+  font-weight: 700;
+}
+.ogana-referrers h2 {
+  max-inline-size: 23ch;
+  margin-block-end: 12px;
+  font-size: clamp(24px, 3.1cqi, 34px);
+}
+.ogana-referrers p:last-child {
+  max-inline-size: 65ch;
+  color: var(--quiet);
+}
+.ogana-faq {
+  padding-block: var(--section-space);
+  border-block-start: 1px solid var(--line);
+  background: var(--surface);
+}
+.ogana-faq-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.55fr);
+  gap: clamp(24px, 4cqi, 48px);
+}
+.ogana-faq dd {
+  margin-block-start: 6px;
+  color: var(--quiet);
+}
+.ogana-faq dd + dt {
+  margin-block-start: 16px;
+  padding-block-start: 16px;
+  border-block-start: 1px solid var(--line);
+}
+
+@container (max-width: 640px) {
+  .ogana-hero,
+  .ogana-example-band,
+  .ogana-faq-inner {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .ogana-hero {
+    gap: 25px;
+  }
+  .ogana-devices {
+    border-radius: 16px;
+  }
+  .ogana-steps {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+    margin-block-start: 22px;
+  }
+  .ogana-steps li {
+    display: grid;
+    grid-template-columns: 36px minmax(0, 1fr);
+    gap: 13px;
+  }
+  .ogana-steps li:not(:last-child) {
+    padding-block-end: 20px;
+  }
+  .ogana-steps li:not(:last-child)::before {
+    inset: 36px auto 0 17px;
+    border-block-start: 0;
+    border-inline-start: 1px solid var(--line);
+  }
+  .ogana-step-number {
+    margin: 0;
+  }
+  .ogana-example-band {
+    gap: 12px;
+    padding: 24px;
+    border-radius: 15px;
+  }
+  .ogana-example h2 {
+    max-inline-size: none;
+  }
+  .ogana-faq-inner {
+    gap: 21px;
+  }
+}
+@container (max-width: 440px) {
+  .ogana-header-inner {
+    min-block-size: 60px;
+    column-gap: 12px;
+  }
+  .ogana-brand {
+    inline-size: 84px;
+  }
+  .ogana-actions {
+    display: grid;
+  }
+  .ogana-header nav {
+    gap: 11px;
+  }
+  .ogana-header nav a {
+    font-size: 12px;
+  }
+  .ogana-hero {
+    padding-block: 34px;
+  }
+  .ogana-hero h1 {
+    font-size: clamp(34px, 10.1cqi, 44px);
+  }
+  .ogana-hero-copy > p:first-of-type {
+    margin-block: 14px 18px;
+  }
+}
+
+.ogana-brand-link {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: 44px;
+}
+
+.ogana-close {
+  background: var(--lilac);
+  padding-block: var(--section-space);
+}
+
+.ogana-close-inner,
+.ogana-footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px 28px;
+}
+
+.ogana-close h2 {
+  max-inline-size: 23ch;
+  color: var(--brand);
+}
+
+.ogana-close .ogana-action {
+  flex: none;
+}
+
+.ogana-footer {
+  border-block-start: 1px solid var(--line);
+  padding-block: 20px;
+}
+
+.ogana-footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 20px;
+}
+
+.ogana-footer nav a {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: 44px;
+  color: var(--brand);
+  font-size: 14px;
+  text-underline-offset: 3px;
+}
+
+@container (max-width: 520px) {
+  .ogana-header-inner {
+    padding-block: 6px;
+  }
+
+  .ogana-header nav {
+    flex-basis: 100%;
+    column-gap: 9px;
+  }
+
+  .ogana-close .ogana-action {
+    inline-size: 100%;
+  }
+
+  .ogana-footer-inner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+}
