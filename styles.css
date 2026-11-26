@@ -235,6 +235,45 @@
   font-size: 14px;
 }
 
+.ogana-paths {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  padding-block-start: clamp(26px, 4cqi, 43px);
+}
+.ogana-path {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  padding: clamp(16px, 2.6cqi, 30px);
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  background: var(--surface);
+}
+.ogana-path h2 {
+  font-size: clamp(23px, 3cqi, 31px);
+}
+.ogana-path ol {
+  padding-inline-start: 1.35em;
+  color: var(--quiet);
+}
+.ogana-path li + li {
+  margin-block-start: 6px;
+}
+.ogana-path li::marker {
+  color: var(--brand);
+  font-weight: 700;
+}
+.ogana-path p {
+  color: var(--quiet);
+  font-size: 14px;
+}
+.ogana-path > a {
+  margin-block-start: auto;
+  text-align: center;
+}
+
 .ogana-plans {
   padding-block: clamp(30px, 4.7cqi, 52px);
 }
@@ -323,39 +362,6 @@
   font-size: 13px;
 }
 
-.ogana-referrers {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 18px 22px;
-  padding-block: clamp(29px, 4.3cqi, 46px);
-}
-.ogana-referrers-copy {
-  flex: 1 1 32rem;
-  min-inline-size: 0;
-  max-inline-size: 65ch;
-}
-.ogana-section-label {
-  margin-block-end: 8px;
-  color: var(--brand);
-  font-size: 13px;
-  font-weight: 700;
-}
-.ogana-referrers h2 {
-  max-inline-size: 23ch;
-  margin-block-end: 12px;
-  font-size: clamp(24px, 3.1cqi, 34px);
-}
-.ogana-referrers h2 ~ p {
-  color: var(--quiet);
-}
-.ogana-referrers p + p {
-  margin-block-start: 12px;
-}
-.ogana-referrers .ogana-secondary {
-  text-align: center;
-}
 .ogana-faq {
   padding-block: var(--section-space);
   border-block-start: 1px solid var(--line);
@@ -384,6 +390,7 @@
 
 @container (max-width: 650px) {
   .ogana-hero,
+  .ogana-paths,
   .ogana-faq-inner {
     grid-template-columns: minmax(0, 1fr);
   }
@@ -410,7 +417,7 @@
     inline-size: 84px;
   }
   .ogana-hero .ogana-action,
-  .ogana-referrers .ogana-secondary {
+  .ogana-path > a {
     inline-size: 100%;
   }
   .ogana-header nav {
@@ -513,7 +520,8 @@
     column-gap: 5px;
   }
 
-  .ogana-referrers .ogana-secondary {
-    padding-inline: 14px;
+  .ogana-path .ogana-secondary {
+    padding-inline: 8px;
+    font-size: 13px;
   }
 }

@@ -15,4 +15,4 @@ Abra `index.html` no navegador. A página é estática e pode ser servida direta
 3. Deixe **Build Command** em branco e mantenha o diretório de saída padrão. A Vercel serve o `index.html` da raiz.
 4. Use o endereço gerado pela Vercel para compartilhar a prévia.
 
-A página inclui `noindex` para a fase de validação. A seção de logos e depoimentos pode entrar antes de **Para quem indica**, quando o conteúdo estiver aprovado.
+A página inclui `noindex` para a fase de validação. Os logos e depoimentos podem entrar entre os cartões e os planos quando o conteúdo real estiver aprovado.
