@@ -1,6 +1,8 @@
 # Ogana · LP V1
 
-Prévia da nova página inicial do Ogana para validação. O HTML, o CSS e os recursos visuais estão neste repositório. Os botões de cadastro e os links de login, planos, ajuda e documentos legais apontam para o site oficial.
+Prévia da nova página inicial do Ogana. `index.html` e `styles.css` são a fonte da mesma página para desktop e celular. O layout vem do mockup de primeiro clique, que fica como referência histórica no GitHub.
+
+A seção de planos faz parte da página. Seus botões e o CTA empresarial levam ao site oficial, e o CTA de afiliado abre o formulário de interesse divulgado pelo Ogana.
 
 ## Ver localmente
 
@@ -13,4 +15,4 @@ Abra `index.html` no navegador. A página é estática e pode ser servida direta
 3. Deixe **Build Command** em branco e mantenha o diretório de saída padrão. A Vercel serve o `index.html` da raiz.
 4. Use o endereço gerado pela Vercel para compartilhar a prévia.
 
-A página inclui `noindex` para a fase de validação. A seção de logos e depoimentos pode entrar depois de **Uma indicação na prática**, quando o conteúdo estiver aprovado.
+A página inclui `noindex` para a fase de validação. A seção de logos e depoimentos pode entrar antes de **Para quem indica**, quando o conteúdo estiver aprovado.
